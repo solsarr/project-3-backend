@@ -1,13 +1,13 @@
 const express = require('express')
 const router = express.Router()
 
-const {User} = require('../models')
+const {User} = require('../../models')
 // const {Post} = require('../models')
 
 // Json body
 router.use(express.json())
 
-const db = require('../models')
+const db = require('../../models')
 console.log(User)
 // Routes
 // INDEX route
