@@ -12,7 +12,7 @@ require('./config/db.connection')
 
 const { PORT, MONGODB_URI } = process.env
 // const PORT = 4000;
-
+  
 // app middleware(express)
 app.use(express.json())
 
