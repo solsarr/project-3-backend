@@ -4,9 +4,9 @@ const app = express();
 const cors = require('cors')
 const morgan = require('morgan')
 // controller import
-const instaController = require('./controllers/insta-controller')
-const postcontroller = require('./controllers/post-controller')
-const commentController = require('./controllers/comment-controller')
+const instaController = require('./Backend/controllers/insta-controller')
+const postcontroller = require('./Backend/controllers/post-controller')
+const commentController = require('./Backend/controllers/comment-controller')
 require("dotenv").config()
 require('./config/db.connection')
 
