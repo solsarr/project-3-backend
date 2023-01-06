@@ -12,6 +12,11 @@ const CommentSchema = new mongoose.Schema({
         required : true,
         max: 300
     },
+    file:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    }
 }, {timestamps: true})
 
 const Comment = mongoose.model("Comment", CommentSchema)

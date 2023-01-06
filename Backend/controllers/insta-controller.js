@@ -24,8 +24,8 @@ router.get('/', async (req,res)=>{
 router.post('/', async (req,res)=>{
     console.log('post route', req.body)
     try{
-        const newPost= await User.create(req.body)
-        res.status(201).json(newPost)
+        const newUser= await User.create(req.body)
+        res.status(201).json(newUser)
 
     } catch(err){
         res.status(400).json({error:err})

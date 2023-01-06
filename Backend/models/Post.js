@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
 const User = require('./User')
-const Comment = require('./Comment')
+// const Comment = require('./Comment')
 
 const PostSchema = new mongoose.Schema({
     image: { 
@@ -16,6 +18,11 @@ const PostSchema = new mongoose.Schema({
     caption: {
         type: String,
         max : 250
+    },
+    file: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
     }
 }, {timestamps: true})
 

@@ -10,7 +10,7 @@ const commentController = require('./controllers/comment-controller')
 require("dotenv").config()
 require('./config/db.connection')
 
-const { PORT } = process.env
+const { PORT, MONGODB_URI } = process.env
 // const PORT = 4000;
 
 // app middleware(express)
@@ -22,10 +22,10 @@ app.use(cors())
 app.use(morgan('dev'))
 
 // router middleware
-app.use('/insta', instaController)
+
 app.use('/insta/post', postcontroller)
 app.use('/insta/comment', commentController)
-
+app.use('/insta', instaController)
 // root router
 app.get('/', (req,res) => res.redirect('/insta'))
 
